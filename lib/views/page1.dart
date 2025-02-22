@@ -10,8 +10,13 @@ class Page1 extends StatefulWidget {
 class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
-    var arrTitles = ['Introduction','Install Software','Learn Tools','Tracking Sketsa'];
-    var arrDuration = ['3h 30min','1h 30min','2h 30min','2h 30min'];
+    var arrTitles = [
+      'Introduction',
+      'Install Software',
+      'Learn Tools',
+      'Tracking Sketsa'
+    ];
+    var arrDuration = ['3h 30min', '1h 30min', '2h 30min', '2h 30min'];
     return Scaffold(
       backgroundColor: Color.fromRGBO(242, 242, 245, 1),
       body: SafeArea(
@@ -187,37 +192,55 @@ class _Page1State extends State<Page1> {
                                     color: Color.fromRGBO(94, 106, 122, 1),
                                     width: 2)),
                             child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                              child: Icon(
-                                Icons.lock,
-                                size: 23,color: Color.fromRGBO(94, 106, 122, 1)
-                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: Icon(Icons.lock,
+                                  size: 23,
+                                  color: Color.fromRGBO(94, 106, 122, 1)),
                             ),
                           ),
-                          Column(
-                            children: [
-                              Text("${arrTitles[index]}",style: TextStyle(fontSize: 18),),
-                              SizedBox(height: 10,),
-                              Row(
-                                children: [
-                                  Icon(Icons.watch_later_outlined),
-                                  SizedBox(width: 5,),
-                                  Text("${arrDuration[index]}",style: TextStyle(fontWeight: FontWeight.w300),)
-                                ],
-                              )
-                            ]
-                          ),
+                          Column(children: [
+                            Text(
+                              "${arrTitles[index]}",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.watch_later_outlined),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  "${arrDuration[index]}",
+                                  style: TextStyle(fontWeight: FontWeight.w300),
+                                )
+                              ],
+                            )
+                          ]),
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 7,vertical: 7),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 7, vertical: 7),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(width: 1,color: Color.fromRGBO(94, 106, 122, 1) )
-                            ),
+                                borderRadius: BorderRadius.circular(5),
+                                border: Border.all(
+                                    width: 1,
+                                    color: Color.fromRGBO(94, 106, 122, 1))),
                             child: Row(
                               children: [
-                                Icon(Icons.play_circle,color: Color.fromRGBO(185, 221, 107, 1),),
-                                SizedBox(width: 3,),
-                                Text("Play Video",style: TextStyle(fontSize: 12),)
+                                Icon(
+                                  Icons.play_circle,
+                                  color: Color.fromRGBO(185, 221, 107, 1),
+                                ),
+                                SizedBox(
+                                  width: 3,
+                                ),
+                                Text(
+                                  "Play Video",
+                                  style: TextStyle(fontSize: 12),
+                                )
                               ],
                             ),
                           )
@@ -229,32 +252,38 @@ class _Page1State extends State<Page1> {
                 ),
               ),
             ),
-            BottomAppBar(
-              color: Colors.white,
-              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-              child: Row(
-
-                children: [
-                  Image.asset('assets/enroll_img.png',width: 50,height: 50,),
-                  SizedBox(width: 20,),
-                  Expanded(
-                    child: Container(
-                      height: 44,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(185, 221, 107, 1)
-                      ),
-                      child: Center(child: Text("Enroll Now",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)),
-                    ),
-                  )
-                ],
+          ],
+        ),
+      )),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/enroll_img.png',
+              width: 50,
+              height: 50,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Expanded(
+              child: Container(
+                height: 44,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color.fromRGBO(185, 221, 107, 1)),
+                child: Center(
+                    child: Text(
+                  "Enroll Now",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                )),
               ),
             )
           ],
         ),
-
-      )),
-
+      ),
     );
   }
 }

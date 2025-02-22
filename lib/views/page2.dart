@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {
@@ -184,7 +186,7 @@ class _Page2State extends State<Page2> {
                 height: 20,
               ),
               SizedBox(
-                height: 210,
+                height: 212,
                 child: ListView.builder(
                   itemBuilder: (context, index) {
                     return Container(
@@ -347,14 +349,20 @@ class _Page2State extends State<Page2> {
                                     color: Color.fromRGBO(254, 156, 67, 1),
                                     size: 20,
                                   ),
-                                  SizedBox(width: 5,),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
                                   Text("4.8 (230)"),
-                                  SizedBox(width: 15,),
+                                  SizedBox(
+                                    width: 15,
+                                  ),
                                   Icon(
                                     Icons.play_circle_outline,
                                     size: 20,
                                   ),
-                                  SizedBox(width: 5,),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
                                   Text("30 Lessons"),
                                 ],
                               )
